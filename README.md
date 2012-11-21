@@ -1,24 +1,19 @@
-# Omniauth::Zaim
+# Omniauth Zaim
 
-TODO: Write a gem description
+A Strategy to auth with Zaim in OmniAuth.
 
-## Installation
+Get your ConsumerKey here:https://dev.zaim.net/home
 
-Add this line to your application's Gemfile:
+## Usage
+Add this line to your app's `Gemfile`:
 
     gem 'omniauth-zaim'
 
-And then execute:
+And add the following to your `config/initializers/omniauth.rb`:
 
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install omniauth-zaim
-
-## Usage
-
-TODO: Write usage instructions here
+    Rails.application.config.middleware.use OmniAuth::Builder do
+      provider :zaim, "your_consumer_key", "your_consumer_secret"
+    end
 
 ## Contributing
 
